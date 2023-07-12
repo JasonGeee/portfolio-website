@@ -1,40 +1,47 @@
 import {
   Box,
-  Container,
+  Button,
   Flex,
-  Image,
-  ListItem,
+  HStack,
+  Slide,
   Spacer,
-  UnorderedList,
+  useDisclosure,
 } from "@chakra-ui/react";
-import devIcon from "../assets/icons8-developer-64.png";
-// import "./Components.css";
+// import devIcon from "../assets/icons8-developer-64.png";
 
 export default function Header() {
   return (
-    <Flex minWidth="max-content" alignItems="center" gap="2">
-      <header className="headerSection">
-        <Box p="2">
-          <Image src={devIcon} className="header" alt="icon" />
-        </Box>
-        <Spacer />
-        <Container>
-          <UnorderedList>
-            <ListItem>
-              <a href="#">Home</a>
-            </ListItem>
-            <ListItem>
-              <a href="#">About Me</a>
-            </ListItem>
-            <ListItem>
-              <a href="#">Projects</a>
-            </ListItem>
-            <ListItem>
-              <a href="#">Contact</a>
-            </ListItem>
-          </UnorderedList>
-        </Container>
-      </header>
+    <Flex
+      bgColor="#d8eefe"
+      // borderBottom="1px"
+      boxShadow="md"
+      width="100%"
+      pt={6}
+      pb={6}
+      pl={10}
+      pr={12}
+      position="fixed"
+    >
+      <Box>
+        <Button color="#094067" variant="link">
+          Jason.dev
+        </Button>
+      </Box>
+      <Spacer />
+      <HStack spacing={10}>
+        <Button color="#094067" variant="link">
+          Home
+        </Button>
+        <Button color="#094067" variant="link">
+          About
+        </Button>
+        <Button color="#094067" variant="link">
+          Projects
+        </Button>
+        <Button color="#094067" variant="link">
+          Contact
+        </Button>
+      </HStack>
     </Flex>
   );
 }
