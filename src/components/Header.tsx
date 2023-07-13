@@ -1,47 +1,100 @@
 import {
   Box,
   Button,
+  Drawer,
+  DrawerBody,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerHeader,
   Flex,
   HStack,
-  Slide,
+  IconButton,
+  Link,
   Spacer,
+  VStack,
   useDisclosure,
 } from "@chakra-ui/react";
 // import devIcon from "../assets/icons8-developer-64.png";
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { ReactNode } from "react";
+
+type Props = {
+  children: ReactNode;
+};
+
+const navItems: Array<string> = ["Home", "About", "Projects", "Contact"];
+
+const NavLink = ({ children }: Props) => (
+  <Link size="xl" px={4} py={2} href={"#"}>
+    {children}
+  </Link>
+);
 
 export default function Header() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
-    <Flex
-      bgColor="#d8eefe"
-      // borderBottom="1px"
-      boxShadow="md"
-      width="100%"
-      pt={6}
-      pb={6}
-      pl={10}
-      pr={12}
-      position="fixed"
-    >
-      <Box>
-        <Button color="#094067" variant="link">
-          Jason.dev
-        </Button>
-      </Box>
-      <Spacer />
-      <HStack spacing={10}>
-        <Button color="#094067" variant="link">
-          Home
-        </Button>
-        <Button color="#094067" variant="link">
-          About
-        </Button>
-        <Button color="#094067" variant="link">
-          Projects
-        </Button>
-        <Button color="#094067" variant="link">
-          Contact
-        </Button>
-      </HStack>
-    </Flex>
+    <>
+      <Flex
+        bgColor="#d8eefe"
+        boxShadow="md"
+        width="100%"
+        py={6}
+        px={10}
+        alignItems="center"
+        position="fixed"
+      >
+        <Box>
+          <Button color="#094067" variant="link">
+            Jason.dev
+          </Button>
+        </Box>
+        <Spacer />
+        <HStack spacing={10} display={{ base: "none", md: "inline-flex" }}>
+          <Button color="#094067" variant="link">
+            Home
+          </Button>
+          <Button color="#094067" variant="link">
+            About
+          </Button>
+          <Button color="#094067" variant="link">
+            Projects
+          </Button>
+          <Button color="#094067" variant="link">
+            Contact
+          </Button>
+        </HStack>
+        <IconButton
+          size={"md"}
+          icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+          aria-label="Open Menu"
+          display={{ md: "none" }}
+          onClick={isOpen ? onClose : onOpen}
+          colorScheme="blue"
+        />
+      </Flex>
+      {isOpen ? (
+        <Box pb={4} display={{ md: "none" }}>
+          <Drawer
+            isOpen={isOpen}
+            placement="right"
+            onClose={onClose}
+            size="full"
+          >
+            <DrawerContent>
+              <DrawerCloseButton />
+              <DrawerHeader>Jason.dev</DrawerHeader>
+              <DrawerBody>
+                <VStack spacing={10}>
+                  {navItems.map((link) => {
+                    return <NavLink key={link}>{link}</NavLink>;
+                  })}
+                </VStack>
+              </DrawerBody>
+            </DrawerContent>
+          </Drawer>
+        </Box>
+      ) : null}
+    </>
   );
 }
