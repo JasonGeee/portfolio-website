@@ -1,34 +1,35 @@
-import { Box, Flex, Heading, Image, Stack, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Hide, Image, Stack, Text } from "@chakra-ui/react";
 
 export default function HeroSection() {
   return (
-    <Flex
-      direction={["column", "row"]}
-      alignItems={"center"}
-      justifyContent={"center"}
-      minHeight={"100vh"}
-      gap={60}
-    >
-      <Stack spacing={3}>
-        <Text fontSize="xl" color="#5f6c7b">
-          Hello, my name is
-        </Text>
-        <Heading color="#094067" as="h1" size="4xl">
-          Jason Gutierrez
-        </Heading>
-        <Heading color="#094067" as="h1" size="4xl">
-          Software Support
-        </Heading>
-        <Text fontSize="xl" color="#5f6c7b">
-          Aspiring Software Engineer based in Austin, Texas 📍
-        </Text>
-      </Stack>
-      <Box boxSize="md" pt="60px">
-        <Image
-          src="../src/assets/undraw_programming_re_kg9v.svg"
-          alt="developer"
-        />
-      </Box>
-    </Flex>
+    <Box>
+      <Flex
+        direction={["column", "row"]}
+        alignItems={"center"}
+        justifyContent={"center"}
+        minHeight={"100vh"}
+        gap={20}
+        px="25px"
+      >
+        <Stack spacing={3}>
+          <Heading color="#094067" as="h1" size={{ base: "2xl", md: "4xl" }}>
+            Software Developer
+          </Heading>
+          <Text fontSize="xl" color="#5f6c7b">
+            Hi, I'm Jason Gutierrez. Aspiring Software Developer based in
+            Austin, Texas 📍
+          </Text>
+        </Stack>
+        <Hide below="lg">
+          <Box pt="60px">
+            <Image
+              boxSize="550px"
+              src="../src/assets/undraw_programming_re_kg9v.svg"
+              alt="developer"
+            />
+          </Box>
+        </Hide>
+      </Flex>
+    </Box>
   );
 }

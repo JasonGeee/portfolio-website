@@ -5,7 +5,7 @@ import { BiLogoGithub } from "react-icons/bi";
 export default function Footer() {
   return (
     <Flex
-      width="100%"
+      minWidth="100%"
       justifyContent={"center"}
       alignItems={"center"}
       px={40}
