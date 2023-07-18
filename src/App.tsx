@@ -8,7 +8,7 @@ import { Box } from "@chakra-ui/react";
 
 function App() {
   return (
-    <Box bgColor="#fffffe">
+    <Box bgColor="#d8eefe">
       <Header />
       <HeroSection />
       <AboutMe />
