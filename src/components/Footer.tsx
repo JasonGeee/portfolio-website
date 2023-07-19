@@ -1,12 +1,4 @@
-import {
-  Box,
-  Flex,
-  HStack,
-  Icon,
-  IconButton,
-  Spacer,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Flex, IconButton, Text } from "@chakra-ui/react";
 import { CiLinkedin } from "react-icons/ci";
 import { BiLogoGithub } from "react-icons/bi";
 
