@@ -36,23 +36,6 @@ export default function Footer() {
       <Text color="#094067" fontSize={"xl"} fontWeight={500}>
         Made with ❤️ by Jason Gutierrez
       </Text>
-      {/* <Spacer />
-      <HStack>
-        <IconButton
-          variant="none"
-          aria-label="Linkedin"
-          fontSize="50px"
-          _hover={{}}
-          // colorScheme="red"
-          icon={<CiLinkedin />}
-        />
-        <IconButton
-          variant="none"
-          aria-label="Github"
-          fontSize="50px"
-          icon={<BiLogoGithub />}
-        />
-      </HStack> */}
     </Flex>
   );
 }
