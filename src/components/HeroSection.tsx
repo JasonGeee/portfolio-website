@@ -14,12 +14,11 @@ import { CiLinkedin } from "react-icons/ci";
 
 export default function HeroSection() {
   return (
-    <Box>
+    <Box height="90vh">
       <Flex
         direction={{ base: "column", md: "row" }}
         alignItems="center"
         mx="auto"
-        // width="90%"
       >
         <Box>
           <Heading
