@@ -35,32 +35,24 @@ export default function Header() {
 
   return (
     <>
-      <Flex
-        bgColor="#d8eefe"
-        boxShadow="md"
-        width="100%"
-        py={6}
-        px={10}
-        alignItems="center"
-        position="fixed"
-      >
+      <Flex py={10} justifyContent="center">
         <Box>
-          <Button color="#094067" variant="link">
+          <Button color="#094067" variant="link" fontSize="xl">
             Jason.dev
           </Button>
         </Box>
         <Spacer />
         <HStack spacing={10} display={{ base: "none", md: "inline-flex" }}>
-          <Button color="#094067" variant="link">
+          <Button color="#094067" variant="link" fontSize="xl">
             Home
           </Button>
-          <Button color="#094067" variant="link">
+          <Button color="#094067" variant="link" fontSize="xl">
             About
           </Button>
-          <Button color="#094067" variant="link">
+          <Button color="#094067" variant="link" fontSize="xl">
             Projects
           </Button>
-          <Button color="#094067" variant="link">
+          <Button color="#094067" variant="link" fontSize="xl">
             Contact
           </Button>
         </HStack>
