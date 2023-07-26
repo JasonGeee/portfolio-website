@@ -37,22 +37,22 @@ export default function Header() {
     <>
       <Flex py={10} justifyContent="center">
         <Box>
-          <Button color="#094067" variant="link" fontSize="xl">
+          <Button color="#094067" variant="link" fontSize="2xl">
             Jason.dev
           </Button>
         </Box>
         <Spacer />
         <HStack spacing={10} display={{ base: "none", md: "inline-flex" }}>
-          <Button color="#094067" variant="link" fontSize="xl">
+          <Button color="#094067" variant="link" fontSize="2xl">
             Home
           </Button>
-          <Button color="#094067" variant="link" fontSize="xl">
+          <Button color="#094067" variant="link" fontSize="2xl">
             About
           </Button>
-          <Button color="#094067" variant="link" fontSize="xl">
+          <Button color="#094067" variant="link" fontSize="2xl">
             Projects
           </Button>
-          <Button color="#094067" variant="link" fontSize="xl">
+          <Button color="#094067" variant="link" fontSize="2xl">
             Contact
           </Button>
         </HStack>
