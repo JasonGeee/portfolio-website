@@ -12,7 +12,7 @@ import {
 import { BiLogoGithub } from "react-icons/bi";
 import { CiLinkedin } from "react-icons/ci";
 
-export default function HeroSection() {
+const HeroSection = () => {
   return (
     <Box height="90vh">
       <Flex
@@ -78,4 +78,6 @@ export default function HeroSection() {
       </Flex>
     </Box>
   );
-}
+};
+
+export default HeroSection;

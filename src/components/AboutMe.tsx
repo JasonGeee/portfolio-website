@@ -120,7 +120,7 @@ const skills: UserSkills[] = [
   },
 ];
 
-export default function AboutMe() {
+const AboutMe = () => {
   return (
     <Box pb="100px">
       <Center>
@@ -193,4 +193,6 @@ export default function AboutMe() {
       </Flex>
     </Box>
   );
-}
+};
+
+export default AboutMe;

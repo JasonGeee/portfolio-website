@@ -30,7 +30,7 @@ const NavLink = ({ children }: Props) => (
   </Link>
 );
 
-export default function Header() {
+const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
@@ -89,4 +89,6 @@ export default function Header() {
       ) : null}
     </>
   );
-}
+};
+
+export default Header;

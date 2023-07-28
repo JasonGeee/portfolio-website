@@ -16,7 +16,7 @@ import { EmailIcon } from "@chakra-ui/icons";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-export default function Contact() {
+const Contact = () => {
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   const form = useRef<HTMLFormElement>(null!);
   const [name, setName] = useState<string>("");
@@ -123,4 +123,6 @@ export default function Contact() {
       <ToastContainer />
     </Box>
   );
-}
+};
+
+export default Contact;

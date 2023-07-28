@@ -2,7 +2,7 @@ import { Box, Flex, IconButton, Text } from "@chakra-ui/react";
 import { CiLinkedin } from "react-icons/ci";
 import { BiLogoGithub } from "react-icons/bi";
 
-export default function Footer() {
+const Footer = () => {
   return (
     <Flex
       minWidth="100%"
@@ -30,4 +30,6 @@ export default function Footer() {
       </Text>
     </Flex>
   );
-}
+};
+
+export default Footer;
